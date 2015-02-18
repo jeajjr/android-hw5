@@ -1,5 +1,6 @@
 package com.almasapp.hw5.almasapp5;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -45,7 +46,7 @@ public class FrontPageActivity extends ActionBarActivity implements FrontPageFra
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 break;
             case R.id.buttonFrontViewPager:
-
+                startActivity(new Intent(this, ViewPagerActivity.class));
 
                 break;
             case  R.id.buttonFrontMasterDetail:

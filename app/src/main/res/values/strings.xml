@@ -13,5 +13,6 @@
     <string name="picture_title">A picture of me:</string>
     <string name="front_page_title">Homework 5</string>
     <string name="title_activity_view_pager">ViewPagerActivity</string>
-
+    <string name="movies_stars">Stars:</string>
+    <string name="movies_director">Director:</string>
 </resources>
