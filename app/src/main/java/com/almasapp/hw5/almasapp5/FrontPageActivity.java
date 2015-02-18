@@ -1,7 +1,6 @@
 package com.almasapp.hw5.almasapp5;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -17,8 +16,6 @@ public class FrontPageActivity extends ActionBarActivity implements FrontPageFra
                     .add(R.id.container, new FrontPageFragment())
                     .commit();
         }
-
-
     }
 
     @Override
@@ -48,6 +45,7 @@ public class FrontPageActivity extends ActionBarActivity implements FrontPageFra
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 break;
             case R.id.buttonFrontViewPager:
+
 
                 break;
             case  R.id.buttonFrontMasterDetail:

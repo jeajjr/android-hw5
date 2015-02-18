@@ -5,7 +5,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="about_me_title">About me</string>
     <string name="my_name_title">My name:</string>
     <string name="my_name">Jose Ernesto Almas de Jesus Junior</string>
@@ -13,5 +12,6 @@
     <string name="class_session">CSE 400</string>
     <string name="picture_title">A picture of me:</string>
     <string name="front_page_title">Homework 5</string>
+    <string name="title_activity_view_pager">ViewPagerActivity</string>
 
 </resources>
