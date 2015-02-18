@@ -17,6 +17,8 @@ public class FrontPageActivity extends ActionBarActivity implements FrontPageFra
                     .add(R.id.container, new FrontPageFragment())
                     .commit();
         }
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
     }
 
     @Override

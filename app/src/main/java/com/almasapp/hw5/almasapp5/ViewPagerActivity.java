@@ -3,9 +3,6 @@ package com.almasapp.hw5.almasapp5;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
 
 public class ViewPagerActivity extends ActionBarActivity {
 
@@ -25,6 +22,6 @@ public class ViewPagerActivity extends ActionBarActivity {
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mViewPager.setAdapter(myFragmentPagerAdapter);
 
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
