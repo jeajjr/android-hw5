@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.os.Build;
 
 
-public class FrontPage extends ActionBarActivity {
+public class FrontPageActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
