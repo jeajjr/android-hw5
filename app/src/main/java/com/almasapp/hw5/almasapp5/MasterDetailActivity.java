@@ -46,6 +46,7 @@ public class MasterDetailActivity extends ActionBarActivity implements RecyclerV
         else {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.item_list, MovieDetailFragment.newInstance(movieData.getItem(position)))
+                    .addToBackStack("movie detail")
                     .commit();
         }
     }

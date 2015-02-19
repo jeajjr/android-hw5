@@ -42,6 +42,7 @@ public class FrontPageActivity extends ActionBarActivity implements FrontPageFra
             case R.id.buttonFrontAboutMe:
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, new AboutMeFragment())
+                        .addToBackStack("about me")
                         .commit();
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 break;
