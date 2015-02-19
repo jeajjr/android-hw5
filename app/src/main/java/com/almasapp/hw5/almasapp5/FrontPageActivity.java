@@ -50,7 +50,7 @@ public class FrontPageActivity extends ActionBarActivity implements FrontPageFra
 
                 break;
             case  R.id.buttonFrontMasterDetail:
-
+                startActivity(new Intent(this, MasterDetailActivity.class));
                 break;
         }
     }

@@ -15,4 +15,6 @@
     <string name="title_activity_view_pager">ViewPagerActivity</string>
     <string name="movies_stars">Stars:</string>
     <string name="movies_director">Director:</string>
+    <string name="title_activity_master_detail">MasterDetailActivity</string>
+
 </resources>

@@ -15,12 +15,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".ViewPagerActivity"
             android:label="@string/title_activity_view_pager" >
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FrontPageActivity" />
+        </activity>
+        <activity
+            android:name=".MasterDetailActivity"
+            android:label="@string/title_activity_master_detail" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FrontPageActivity" />
