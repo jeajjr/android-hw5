@@ -3,6 +3,7 @@ package com.almasapp.hw5.almasapp5;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +18,34 @@ import java.util.HashMap;
  * A simple {@link Fragment} subclass.
  */
 public class MovieDetailFragment extends Fragment {
+    final String TAG = "MovieDetailFragment";
     static String ARG_SECTION_NUMBER = "args";
+    static String ARG_COUNTER = "counter";
+
+    int counter;
 
     public MovieDetailFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        if(savedInstanceState == null) {
+            Log.d(TAG, "savedInstanceState null");
+            counter = 0;
+        }
+        else {
+            Log.d(TAG, "savedInstanceState not null");
+            counter = savedInstanceState.getInt(ARG_COUNTER);
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putInt(ARG_COUNTER, counter);
+        Log.d(TAG, "saving instance");
     }
 
     public static MovieDetailFragment newInstance(HashMap<String, ?> movie) {
@@ -36,7 +61,7 @@ public class MovieDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_movie_detail, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_movie_detail, container, false);
         
         HashMap<String, ?> movie = (HashMap<String, ?>) getArguments().get(ARG_SECTION_NUMBER);
 
@@ -49,6 +74,8 @@ public class MovieDetailFragment extends Fragment {
         RatingBar rating = (RatingBar) rootView.findViewById(R.id.ratingBarMovieDetailRating);
         TextView description = (TextView) rootView.findViewById(R.id.textViewMovieDetailDescription);
 
+        final TextView clicks = (TextView) rootView.findViewById(R.id.textViewMovieDetailClicks);
+
         title.setText(movie.get("name").toString());
         year.setText(movie.get("year").toString());
         length.setText(movie.get("length").toString());
@@ -57,6 +84,21 @@ public class MovieDetailFragment extends Fragment {
         cover.setImageResource((Integer) movie.get("image"));
         rating.setRating( (int) Double.parseDouble(movie.get("rating").toString()) + 1 );
         description.setText(movie.get("description").toString());
+
+        clicks.setText(rootView.getResources().getString(R.string.clicks_first) +
+                " " + counter + " " +
+                rootView.getResources().getString(R.string.clicks_second));
+
+        clicks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter++;
+
+                clicks.setText(rootView.getResources().getString(R.string.clicks_first) +
+                                " " + counter + " " +
+                                rootView.getResources().getString(R.string.clicks_second));
+            }
+        });
 
         return rootView;
     }

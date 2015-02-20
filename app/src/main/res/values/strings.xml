@@ -16,5 +16,7 @@
     <string name="movies_stars">Stars:</string>
     <string name="movies_director">Director:</string>
     <string name="title_activity_master_detail">MasterDetailActivity</string>
+    <string name="clicks_first">This was clicked</string>
+    <string name="clicks_second">times</string>
 
 </resources>
