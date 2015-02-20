@@ -25,6 +25,7 @@ public class MovieDetailFragment extends Fragment {
 
     public static MovieDetailFragment newInstance(HashMap<String, ?> movie) {
         MovieDetailFragment fragment = new MovieDetailFragment();
+		
         Bundle args = new Bundle();
         args.putSerializable(ARG_SECTION_NUMBER, movie);
         fragment.setArguments(args);
